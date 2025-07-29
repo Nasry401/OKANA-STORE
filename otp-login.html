@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion OTP - OKANA STORE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+
+  <div id="navbar"></div>
+
+  <main class="max-w-md mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-6">🔐 Connexion par OTP</h1>
+
+    <form id="otpRequestForm" class="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded shadow">
+      <input type="text" name="identifiant" placeholder="📧 Email ou 📱 Téléphone" required class="w-full p-2 border rounded dark:bg-gray-700" />
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">📨 Envoyer OTP</button>
+    </form>
+
+    <form id="otpVerifyForm" class="hidden mt-6 space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded shadow">
+      <input type="text" name="otp" placeholder="🔑 Entrer OTP" required class="w-full p-2 border rounded dark:bg-gray-700" />
+      <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">✅ Se connecter</button>
+    </form>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/otp.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - OKANA STORE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition duration-300">
+
+  <!-- ✅ Navbar -->
+  <div id="navbar"></div>
+
+  <!-- 📦 Checkout form -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold mb-6">🧾 Finaliser ma commande</h1>
+    <form id="checkoutForm" class="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded shadow">
+      <div>
+        <label class="block">Nom complet</label>
+        <input type="text" name="nom" required class="w-full p-2 border rounded dark:bg-gray-700" />
+      </div>
+      <div>
+        <label class="block">Email</label>
+        <input type="email" name="email" required class="w-full p-2 border rounded dark:bg-gray-700" />
+      </div>
+      <div>
+        <label class="block">Téléphone</label>
+        <input type="tel" name="tel" required class="w-full p-2 border rounded dark:bg-gray-700" />
+      </div>
+      <div>
+        <label class="block">Adresse de livraison</label>
+        <textarea name="adresse" required class="w-full p-2 border rounded dark:bg-gray-700"></textarea>
+      </div>
+      <div id="commandeApercu" class="bg-white dark:bg-gray-900 border rounded p-4 mt-4">
+        <!-- Récapitulatif de commande -->
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">✅ Confirmer la commande</button>
+    </form>
+  </main>
+
+  <!-- ✅ Footer -->
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

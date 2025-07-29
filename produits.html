@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produits - OKANA STORE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition duration-300">
+
+  <!-- ✅ Navbar -->
+  <div id="navbar"></div>
+
+  <!-- 🔎 Barre de recherche -->
+  <section class="max-w-7xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-bold mb-4">🔍 Recherche & Filtrage</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
+      <input type="text" id="searchInput" placeholder="🔎 Mot-clé..." class="p-2 border rounded w-full dark:bg-gray-800" />
+      <select id="categoryFilter" class="p-2 border rounded w-full dark:bg-gray-800">
+        <option value="">🗂️ Toutes catégories</option>
+        <option value="audio">Audio</option>
+        <option value="bluetooth">Bluetooth</option>
+        <option value="smart">Smart</option>
+        <option value="santé">Santé</option>
+        <option value="portable">Portable</option>
+      </select>
+      <input type="number" id="minPrice" placeholder="💰 Prix min" class="p-2 border rounded w-full dark:bg-gray-800" />
+      <input type="number" id="maxPrice" placeholder="💰 Prix max" class="p-2 border rounded w-full dark:bg-gray-800" />
+    </div>
+  </section>
+
+<label class="inline-flex items-center mt-4">
+  <input type="checkbox" id="compareCheckbox" class="form-checkbox h-5 w-5 text-blue-600" />
+  <span class="ml-2">Ajouter à la comparaison</span>
+</label>
+  <!-- 🛍️ Résultat catalogue -->
+  <section class="max-w-7xl mx-auto px-4">
+    <div id="resultatProduits" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/filtrage.js"></script>
+</body>
+</html>
